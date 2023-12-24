@@ -1,0 +1,11 @@
+{
+  "entries": [
+    "dislocatormod:escape_rope_from_enderdragon",
+    "dislocatormod:dislocator_from_desert_temples",
+    "dislocatormod:dislocator_from_jungle_temples",
+    "dislocatormod:dislocator_from_village_temple",
+    "dislocatormod:escape_rope_from_enderdragon2",
+    "dislocatormod:return_stone_from_enderman"
+  ],
+  "replace": false
+}

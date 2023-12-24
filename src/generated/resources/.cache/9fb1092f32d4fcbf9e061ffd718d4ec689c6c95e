@@ -1,0 +1,9 @@
+// 1.20.1	2023-12-24T21:34:53.4526824	Recipes
+1372aab0b90682d74f4b9adf476c81f639db6514 data/dislocatormod/advancements/recipes/misc/universal_respawnanchor_block.json
+a416cf8c55cd98182b37067e325e7d0bef10a27a data/dislocatormod/recipes/universal_respawnanchor_block.json
+5ff94f4c39a1fbf7f22854d1a0b097ebfaee6949 data/minecraft/advancements/recipes/misc/cobblestone.json
+ae88b2eed1ad396c04170c472497b1a30d21f549 data/minecraft/advancements/recipes/misc/warped_planks.json
+e0c8609b2443826fb347fb314daae8532bd61bbf data/minecraft/advancements/recipes/misc/warped_stem.json
+bdb7bc798a09c3f72e0886c38b037b12cdae3c2b data/minecraft/recipes/cobblestone.json
+25cd3e292b71bc8cecdae46706fef34740f19825 data/minecraft/recipes/warped_planks.json
+f650fd0d3200044c4d8e305686d6f9275f41cc03 data/minecraft/recipes/warped_stem.json

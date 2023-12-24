@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chorus_fruit"
+    },
+    "S": {
+      "item": "minecraft:end_stone_bricks"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SCS",
+    " S "
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:cobblestone"
+  },
+  "show_notification": true
+}

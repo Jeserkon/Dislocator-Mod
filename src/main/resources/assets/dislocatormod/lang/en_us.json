@@ -1,0 +1,14 @@
+{
+  "block.dislocatormod.dislocator_block": "Dislocator Block",
+  "tooltip.dislocatormod.dislocator_block.tooltip": "Teleports you to a random place very far away",
+  "tooltip.dislocatormod.dislocator_block.client_message": "You stepped on a dislocator block and were teleported far away! Craft a Return Stone to get back!",
+  "item.dislocatormod.return_stone": "Return Stone",
+  "tooltip.dislocatormod.respawn_stone.tooltip": "Returns you to your last respawnpoint. Dropped from phantoms",
+  "item.dislocatormod.escape_rope": "Escape Rope",
+  "tooltip.dislocatormod.escape_rope.tooltip": "Lets you escape back to the overworld! Dropped from enderdragon",
+  "block.dislocatormod.universal_respawnanchor_block": "Universal Respawn Anchor",
+  "tooltip.dislocatormod.universal_respawnanchor_block.tooltip": "Lets you set your respawn in any dimension. Cauption: Spawnpoint will still be there after removing the block until set somewhere else!",
+
+  "creativetab.dislocatormod_tab": "Dislocator Mod Tab"
+
+}
