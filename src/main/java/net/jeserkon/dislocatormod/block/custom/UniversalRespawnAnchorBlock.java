@@ -34,6 +34,7 @@ public class UniversalRespawnAnchorBlock extends Block {
                 pPos = new BlockPos(pPos.getX(), pPos.getY() + 1, pPos.getZ());
                 serverplayer.setRespawnPosition(pLevel.dimension(), pPos, 0.0F, true, true);
                 pLevel.playSound((Player)null, (double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, SoundEvents.RESPAWN_ANCHOR_SET_SPAWN, SoundSource.BLOCKS, 1.0F, 1.0F);
+                serverplayer.setExperienceLevels(0);
                 return InteractionResult.SUCCESS;
             }
         }

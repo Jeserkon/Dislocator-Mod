@@ -1,6 +1,7 @@
 
 package net.jeserkon.dislocatormod.block.custom;
 
+import net.jeserkon.dislocatormod.item.Moditems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -14,10 +15,12 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -57,6 +60,16 @@ public class DislocatorBlock extends Block {
                 return;
             }
 
+            //Checks for Leather Armor to disable the dislocator for you
+            if (pEntity instanceof Player) {
+                Player pPlayer = (Player)pEntity;
+                if(pPlayer.getInventory().getArmor(0).is(Items.LEATHER_BOOTS)||pPlayer.getInventory().getArmor(1).is(Items.LEATHER_LEGGINGS)||pPlayer.getInventory().getArmor(2).is(Items.LEATHER_CHESTPLATE)||pPlayer.getInventory().getArmor(3).is(Items.LEATHER_HELMET)){
+                    pPlayer.displayClientMessage(Component.translatable("tooltip.dislocatormod.rescue_from_dislocator_block.client_message"),false);
+                    pEntity.setPortalCooldown();
+                    return;
+                }
+            }
+
             //Calculating random coordinates to teleport to
             DislocatorTPTargetX = ((rand.nextInt(40) - 19)) * 200000 + 100000;
             DislocatorTPTargetZ = ((rand.nextInt(40) - 19)) * 200000 + 100000;
@@ -76,8 +89,8 @@ public class DislocatorBlock extends Block {
             //Get fire resistance and water breathing for basic protection after teleport
             if (pEntity instanceof LivingEntity) {
                 LivingEntity livingentity = (LivingEntity)pEntity;
-                livingentity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 500));
-                livingentity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 500));
+                livingentity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 2000));
+                livingentity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 2000));
             }
 
             SomethingTeleported = true;
